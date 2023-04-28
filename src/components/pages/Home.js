@@ -1,9 +1,22 @@
 import './home.css';
+import React, { useState } from 'react';
 
 function HomePage() {
+  const [count, setCount] = useState(0);
+
+  function counterHandler() {
+    setCount(count + 1);
+  }
+
   return (
-  <section className="home-bg-wrapper">
-    <h1><i>Welcome to - Tinted Art..</i></h1>
+  <section class="counter">
+    <h1><i>Welcome..</i></h1>
+    <div>
+      <p>{count}</p>
+      <button onClick={counterHandler}>
+        Click me
+      </button>
+    </div>
   </section>
   )
 }

@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Header.css';
-import { useContext } from 'react';
-import FavouritesContext from '../../store/favorites-context';
 
 function Header() {
-  const favouriteCtx = useContext(FavouritesContext);
   return (
 	<>
 		<nav className="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
@@ -21,14 +18,13 @@ function Header() {
             <Link className="nav-link" to="/profile" >Profile</Link>
           </li> */}
           <li className="nav-item">
-            <Link className="nav-link" to="/paintings" >Paintings</Link>
+            <Link className="nav-link" to="/paintings" >cards</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/addnewcard" >Add painting</Link>
+            <Link className="nav-link" to="/addnewcard" >Add Card</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/favourite" >favourite 
-            <span>{favouriteCtx.totalFavourites}</span>
             </Link>
           </li>
 				</ul>

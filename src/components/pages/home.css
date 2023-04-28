@@ -10,3 +10,8 @@
 .home-bg-wrapper h1 {
   color: #fff;
 }
+
+.counter {
+  text-align: center;
+  margin-top: 40px;
+}
